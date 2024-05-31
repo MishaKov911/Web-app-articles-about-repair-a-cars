@@ -1,0 +1,272 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    word-spacing: 0px;
+    
+}
+*,*:before,*:after{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    min-width: 100%;
+    font-size: 100%;
+    letter-spacing: 1.5px;
+    line-height: 1;
+    font-size: calc(12px + 0.3vw);
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family: inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+* {font-family: "Bebas_Neue_Cyrillic";}
+/*обнулениэ*/
+
+body {
+    /* background-color: rgb(196, 202, 240); */
+}
+.wrapper {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(181, 215, 228);
+    background: linear-gradient(1deg, rgb(138, 207, 234) 0%, rgb(101, 151, 173) 25%, rgba(93, 139, 160, 0.909) 61%, rgba(59, 89, 102, 0.868) 100%);
+    overflow: hidden;
+}
+
+.header{
+    height: 4.5rem;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.1rem;
+    background-color: rgba(75, 50, 69, 0.95);
+    overflow: hidden;
+    z-index: 1000;
+}
+.logoLink{
+    height: 100%;
+    /* margin: 0.5rem 0px 0px 0px; */
+    width: 15rem;
+    display: block;
+    background: url(../templates/images/AutoRemLogoo.png) 50%/100% auto no-repeat;
+}
+
+
+.navMain__ ul{
+    height: 100%;
+    width: max-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navMain__ ul li{
+    margin: 0 0.4rem;
+}
+li a{
+    color: azure;
+}
+
+
+
+/* Стилі для main__ з 3D ефектом лівої сторінки */
+.main__ {
+    height: 100%;
+    width: 100%;
+    flex: 1;
+    max-width: 700px;
+    margin: 4.9rem auto;
+    padding: 1.1rem;
+    box-sizing: border-box;
+    background: rgb(2, 118, 163);
+    background: linear-gradient(90deg, rgba(0, 94, 131, 0.91) 0%, rgba(39, 135, 177, 0.90) 25%, rgba(6, 98, 141, 0.91) 61%, rgba(5, 56, 83, 0.92) 100%);
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), inset 0 5px 10px rgba(255, 255, 255, 0.2);
+    /* transform: perspective(1000px) rotateX(1deg) rotateY(2deg); */
+    animation: perspectivChange 1s ease forwards;
+    position: relative;
+    overflow: hidden;
+}
+
+.main__::before, .main__::after {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 113%;
+    background: linear-gradient(135deg, rgb(255 255 255 / 3%), rgb(0 0 0 / 9%));
+    border-radius: 73px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: rotate(-2deg);
+}
+
+.main__::after {
+    transform: rotate(4deg);
+    z-index: -2;
+}
+
+/* Стилі для карток */
+.card__link {
+    display: flex;
+    border: 1px solid #082D3DFF;
+    padding: 16px;
+    margin: 16px 0;
+    align-items: flex-start;
+    text-decoration: none;
+    color: inherit;
+    transition: background-color 0.3s, transform 0.3s;
+    transform: skew(1deg, 1deg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card__link:hover {
+    background-color: #ffffff25;
+    transform: translateY(-5px) scale(1.02);
+}
+
+.card__image {
+    min-height: 4.3rem;
+    min-width: 4.3rem;
+    max-width: 5rem;
+    margin-right: 16px;
+}
+
+.card__content {
+    flex: 1;
+}
+
+.card__title {
+    font-size: 1.3em;
+    margin: 0 0 0.8rem;
+    color: #AFCBD7FF;
+}
+
+.card__text {
+    font-size: 0.9em;
+    color: #9BB3BEFF;
+}
+
+.NameContent {
+    font-size: 2em;
+    margin: 1.4rem 0 8px;
+    color: #AFCBD7FF;
+}
+
+
+
+/* .main__{
+    height: 100%;
+    width: 100%;
+    flex: 1;
+    max-width: 700px;
+    margin: 4.9rem auto;
+    padding: 0 1.1rem;
+    box-sizing: border-box;
+    background: rgb(2, 118, 163);
+    background: linear-gradient(-90deg, rgb(0 94 131 / 91%) 0%, rgb(39 135 177 / 90%) 25%, rgb(6 98 141 / 91%) 61%, rgb(5 56 83 / 92%) 100%);
+}
+
+.card__link {
+    display: flex;
+    border: 1px solid #082D3DFF;
+    padding: 16px;
+    margin: 16px 0;
+    align-items: flex-start;
+    text-decoration: none;
+    color: inherit;
+    transition: background-color 5.3s;
+    transform: skew(1deg, 1deg);
+}
+.card__image {
+    min-height: 1.5rem;
+    min-width: 1.5rem;
+    max-width: 7rem;
+    margin-right: 16px;
+}
+.card__content {
+    flex: 1;
+}
+.card__title {
+    font-size: 1.5em;
+    margin: 0 0 1rem;
+    color: #AFCBD7FF;
+}
+.card__text {
+    font-size: 1em;
+    color: #333;
+    color: #9BB3BEFF;
+}
+.card:hover {
+    background-color: #ffffff25;
+}
+.NameContent{
+    font-size: 2em;
+    margin: 1.4rem 0 8px;
+    color: #AFCBD7FF;
+} */
+/* .perspectiveChangeOut {
+    animation: perspectiveChange 2s ease-in-out forwards;
+} */
+
+footer {
+    height: 3rem;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+
+/* Анімація для зміни margin */
+@keyframes marginChange {
+    0% {
+        margin: 0.5rem 0px 0px -18rem;
+    }
+    100% {
+        margin: 0.5rem 0px 0px 0px;
+    }
+}
+@keyframes perspectivChange {
+    0% {
+        transform: perspective(1000px) rotateX(1deg) rotateY(90deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateX(1deg) rotateY(2deg);
+    }
+}
+
+@keyframes perspectivChangeOut {
+    0% {
+        transform: perspective(1000px) rotateX(1deg) rotateY(0deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateX(1deg) rotateY(-90deg);
+    }
+}
+.main__animate{
+    animation: perspectivChangeOut 0.5s ease forwards;
+}

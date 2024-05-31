@@ -1,0 +1,12 @@
+create main header
+
+have been created post shoul be send to admin data base for cheking.
+
+in the post should be links to social sites the autor
+
+to create link main paige in the login and create acaunt pages.
+
+remuve link categories.
+
+to create up bottom.
+
